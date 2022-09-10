@@ -1,0 +1,138 @@
+:root {
+   --Dark-cyan: hsl(158, 36%, 37%);
+   --Cream: hsl(30, 38%, 92%);
+   --Very-dark-blue: hsl(212, 21%, 14%);
+   --Dark-grayish-blue: hsl(228, 12%, 48%);
+   --White: hsl(0, 0%, 100%);
+}
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+}
+
+html {
+   font-size: 14px;
+}
+
+body {
+   min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   background-color: var(--Cream);
+   font-family: 'Montserrat', sans-serif;
+}
+
+main {
+   width: 38rem;
+   display: flex;
+   flex-direction: row;
+}
+
+#imgMobile {
+   display: none;
+}
+
+#imgDesktop {
+   width: 50%;
+   border-radius: 0.6rem 0 0 0.6rem;
+}
+
+img + div {
+   background-color: var(--White);
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   padding: 2rem;
+   border-radius: 0 0.6rem 0.6rem 0;
+}
+
+h1 {
+   color: var(--Very-dark-blue);
+   padding-top: 1.5rem;
+   padding-bottom: 1.5rem;
+   font-family: 'Fraunces', serif;
+   font-weight: 700;
+}
+
+p {
+   color: var(--Dark-grayish-blue);
+}
+
+h2 {
+   color: var(--Dark-cyan);
+   font-family: 'Fraunces', serif;
+   font-weight: 700;
+   font-size: 1.9rem;
+}
+
+div > div:last-child {
+   background-color: var(--Dark-cyan);
+   color: var(--White);
+   font-weight: 700;
+   padding: 0.9rem 0;
+   border-radius: 0.5rem;
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   width: 100%;
+   font-size: 0.85rem;
+}
+
+h1 + p {
+   font-size: 0.9rem;
+}
+
+.pricesWrapper {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   padding-bottom: 1.5rem;
+   padding-top: 1.5rem;
+}
+
+h2 + p {
+   font-size: 0.9rem;
+   padding-left: 1rem;
+}
+
+span {
+   padding-left: 0.7rem;
+}
+
+div > p:first-child {
+   font-size: 0.85rem;
+   letter-spacing: 0.2rem;
+}
+
+div > div:last-child:active {
+   background-color: hsl(158deg 37% 24%);
+   cursor: pointer;
+}
+
+@media screen and (max-width: 400px){
+   #imgDesktop {
+      display: none;
+   }
+
+   #imgMobile {
+      display: unset;
+      border-radius: 0.5rem 0.5rem 0 0;
+      width: 100%;
+   }
+
+   main {
+      width: 90vw;
+      max-width: 24rem;
+      display: flex;
+      flex-direction: column;
+  }
+
+  img + div {
+      border-radius: 0 0 0.5rem 0.5rem;
+  }
+}
