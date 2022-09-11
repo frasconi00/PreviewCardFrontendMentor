@@ -38,6 +38,7 @@ main {
 
 #imgDesktop {
    width: 50%;
+   min-width: 50%;
    border-radius: 0.6rem 0 0 0.6rem;
 }
 
@@ -48,6 +49,7 @@ img + div {
    align-items: flex-start;
    padding: 2rem;
    border-radius: 0 0.6rem 0.6rem 0;
+   max-width: 50%;
 }
 
 h1 {
@@ -134,5 +136,6 @@ div > div:last-child:active {
 
   img + div {
       border-radius: 0 0 0.5rem 0.5rem;
+      max-width: none;
   }
 }
